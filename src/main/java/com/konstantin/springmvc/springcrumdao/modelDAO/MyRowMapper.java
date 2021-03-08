@@ -23,6 +23,7 @@ public class MyRowMapper implements RowMapper<Person> {
         person.setName(rs.getString("name"));
         person.setAge(rs.getInt("age"));
         person.setEmail(rs.getString("email"));
+        System.out.println("11");
         return person;
     }
 
