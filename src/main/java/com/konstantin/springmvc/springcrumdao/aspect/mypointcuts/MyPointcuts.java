@@ -13,7 +13,7 @@ import org.aspectj.lang.annotation.Pointcut;
  */
 public class MyPointcuts {
 
-    @Pointcut("execution(* com.konstantin.springmvc.springcrumdao.PeopleController.PeopleController.*(..))")
+    @Pointcut("execution(* com.konstantin.springmvc.springcrumdao.modelDAO.PersonDAO.index(..))")
     public void checkAccesfromPeopleController() {
     }
 

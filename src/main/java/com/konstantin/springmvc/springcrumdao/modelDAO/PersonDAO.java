@@ -49,6 +49,12 @@ public class PersonDAO {
         return jdbcTemplate.query("select * from people where id = ?", new Object[]{id}, new MyRowMapper()).stream().findAny().orElse(null);
     }
 
+    /**
+     * работает с AOP
+     *
+     * @param person
+     */
+
     public void save(Person person) {
         person.setId(++id);
         jdbcTemplate.update("Insert into people (id, name , age ,email) values (?,?,?,?)",

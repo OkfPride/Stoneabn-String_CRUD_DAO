@@ -21,6 +21,11 @@ public class Person {
 
     private int id;
 
+    @Override
+    public String toString() {
+        return "Person{" + "name=" + name + ", id=" + id + ", age=" + age + ", email=" + email + '}';
+    }
+
     @Min(value = 0, message = "cant be <0")
     private int age;
     @Email(message = "shoud be a email vaild form")

@@ -33,7 +33,7 @@ public class PeopleController {
 
     private PersonDAO personDAO;
 
-//    @Autowired
+    @Autowired
     public PeopleController(PersonDAO personDAO) {
         this.personDAO = personDAO;
     }
