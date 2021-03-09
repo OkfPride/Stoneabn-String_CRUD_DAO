@@ -24,12 +24,12 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
  *
  * @author JavaDev
  */
-@ComponentScan("com.konstantin.springmvc")
-@org.springframework.context.annotation.Configuration
-@EnableWebMvc
 /*
 замена для wev.xml
 */
+@ComponentScan("com.konstantin.springmvc")
+@org.springframework.context.annotation.Configuration
+@EnableWebMvc
 @EnableAspectJAutoProxy
 public class Configuration implements WebMvcConfigurer {
 
