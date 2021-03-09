@@ -31,12 +31,18 @@ public class DispatcherMy extends AbstractAnnotationConfigDispatcherServletIniti
         return new String[]{"/"};//To change body of generated methods, choose Tools | Templates.
     }
 
+    /*
+    нужен для включения фильтра в html для возможности изменять пост запрос в patch и delete
+     */
     @Override
     public void onStartup(ServletContext aServletContext) throws ServletException {
         super.onStartup(aServletContext);
         registerHiddenFieldFilter(aServletContext);
     }
 
+    /*
+    нужен для включения фильтра в html для возможности изменять пост запрос в patch и delete
+     */
     private void registerHiddenFieldFilter(ServletContext aContext) {
         aContext.addFilter("hiddenHttpMethodFilter",
                 new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null, true, "/*");

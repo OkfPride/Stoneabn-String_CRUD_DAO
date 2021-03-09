@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
@@ -26,13 +27,18 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 @ComponentScan("com.konstantin.springmvc")
 @org.springframework.context.annotation.Configuration
 @EnableWebMvc
-/*
-замена для wev.xml
+@PropertySource("ИМЯ документа с хранимыми пропертями")
+/**
+замена для web.xml
 */
 public class Configuration implements WebMvcConfigurer {
 
     private final ApplicationContext applicationContext;
 
+    /**
+     *
+     * @param applicationContext
+     */
     @Autowired
     public Configuration(ApplicationContext applicationContext) {
         this.applicationContext = applicationContext;
