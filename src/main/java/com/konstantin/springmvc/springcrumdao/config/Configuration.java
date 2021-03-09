@@ -26,6 +26,9 @@ import org.thymeleaf.spring5.view.ThymeleafViewResolver;
 @ComponentScan("com.konstantin.springmvc")
 @org.springframework.context.annotation.Configuration
 @EnableWebMvc
+/*
+замена для wev.xml
+*/
 public class Configuration implements WebMvcConfigurer {
 
     private final ApplicationContext applicationContext;
