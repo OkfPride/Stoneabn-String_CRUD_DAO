@@ -56,10 +56,11 @@ public class PersonDAO {
     }
 
     public void update(int id, Person person) {
-        show(id).setName(person.getName());
-        show(id).setAge(person.getAge());
-        show(id).setEmail(person.getEmail());
-        jdbcTemplate.update("Update people Set name = ?,age = ?, email = ?", person.getName(), person.getAge(), person.getEmail());
+        Person show = show(id);
+        show.setName(person.getName());
+        show.setAge(person.getAge());
+        show.setEmail(person.getEmail());
+        jdbcTemplate.update("Update people Set name = ?,age = ?, email = ? where id = ?", person.getName(), person.getAge(), person.getEmail(), id);
     }
 
     public void delete(int id) {
